@@ -1,0 +1,31 @@
+package repiting;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int i = 1;
+		int h = 0;
+		String line = "";
+		while (i <= 5) {
+			while (h % 2 == 0) {
+				line +="***";
+				h++;
+			}
+			while (h % 2 != 0) {
+				line +="+++";
+				h++;
+			}if(h==n) {
+				line+="\n";
+				i++;
+				h=0;
+			}
+		}
+		System.out.print(line);
+
+	}
+}
